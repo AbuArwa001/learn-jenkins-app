@@ -36,11 +36,12 @@ pipeline {
                 """
             }
         }
-        post {
-            always {
-                junit 'test-results.xml/junit.xml'
-                echo 'Cleaning up workspace...'
-            }
-        }
+
     }
+    post {
+        always {
+            junit 'test-results.xml/junit.xml'
+            echo 'Cleaning up workspace...'
+        }
+}
 }
